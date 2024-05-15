@@ -1,18 +1,7 @@
-version: '3.8'
-
+version: '3.9'
 services:
   webapi:
-    build:
-      context: ./min-api-with-mongo/WebApi
-      dockerfile: Dockerfile
-    ports:
-      - "5001:5001"
+    build: WebApi
     restart: always
-    depends_on:
-      - mongodb
-
-  mongodb:
-    image: mongo
-    restart: always
-    ports:
-      - "27017:27017"
+    ports: 
+      - 5001:5001
