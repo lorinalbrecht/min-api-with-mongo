@@ -15,4 +15,4 @@ docker run
 docker run --name mongodb -d -p 27017:27017 -v data:/data/db -e MONGO_INITDB_ROOT_USERNAME=gbs -e MONGO_INITDB_ROOT_PASSWORD=geheim mongo
 
 ## Package
-dotnet add package MongoDB.Driver --version
+dotnet add package MongoDB.Driver
