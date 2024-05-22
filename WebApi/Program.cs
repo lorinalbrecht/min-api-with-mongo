@@ -10,6 +10,7 @@ var app = builder.Build();
 app.MapGet("/", () => "Hello World!");
 
 app.MapGet("/check", (Microsoft.Extensions.Options.IOptions<DatabaseSettings> options) => {
+    Console.WriteLine("ConnectionString:" + options.Value.ConnectionString  ?? "");
     string mongoConnection = options.Value.ConnectionString;
     var mongoClient = new MongoClient(mongoConnection);
     var databaseNames = mongoClient.ListDatabaseNames().ToList();
