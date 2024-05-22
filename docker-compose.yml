@@ -16,6 +16,6 @@ services:
       MONGO_INTDB_ROOT_USERNAME: gbs
       MONGO_INTDB_ROOT_PASSWORD: geheim
     volumes:
-      - mongoData:/data/DatabaseSettings__ConnectionString
+      - mongoData:/data/db
 volumes:
   mongoData: 
