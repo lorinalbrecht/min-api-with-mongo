@@ -7,6 +7,8 @@ services:
       - mongodb
     environment:
       DatabaseSettings__ConnectionString: "mongodb://gbs:geheim@mongodb:27017"
+      DatabaseSettings__TestX: "X von Docker compose"
+      DatabaseSettings__TestY: "Y von Docker compose"
     ports: 
       - 5001:5001
   mongodb:

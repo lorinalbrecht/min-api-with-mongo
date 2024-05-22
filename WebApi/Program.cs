@@ -17,4 +17,8 @@ app.MapGet("/check", (Microsoft.Extensions.Options.IOptions<DatabaseSettings> op
     return string.Join(",", databaseNames);
 });
 
+app.MapGet("/config", (Microsoft.Extensions.Options.IOptions<DatabaseSettings> options) => {
+    return options.Value.TestX + "\n" + options.Value.TestY;
+});
+
 app.Run();
